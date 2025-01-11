@@ -61,6 +61,7 @@ export default {
       },
       backgroundImage: {
         "custom-gradient": "linear-gradient(90deg, #F9CE34, #EE2A7B, #6228D7)",
+        "Landinglg-bg": "url('./desktop/image-hero.jpg')",
       },
     },
   },
