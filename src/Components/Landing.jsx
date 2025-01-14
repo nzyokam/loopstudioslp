@@ -1,7 +1,3 @@
-//import Navbar from "./ui/NavBar";
-
-//import Navbar from "./ui/NavBar";
-
 const Landing = () => {
   return (
     <div>

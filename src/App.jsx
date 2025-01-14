@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Home from "./Home.jsx";
 import Events from "./Events.jsx";
@@ -15,9 +10,8 @@ import Products from "./Products.jsx";
 import Layout from "./Components/ui/Layout.jsx";
 
 const AppContent = () => {
-
   return (
-    <Layout >
+    <Layout>
       <Routes>
         <Route index element={<Home />} />
         <Route path="/Careers" element={<Careers />} />{" "}
