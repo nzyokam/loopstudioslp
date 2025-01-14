@@ -14,19 +14,41 @@ const Creations = () => {
 
   return (
     <div>
-      <div className="flex flex-row m-10">
-        <h1 className="">OUR CREATIONS</h1>
-        <button>SEE ALL</button>
+{/* Large Devices */}
+    <div className="sm:hidden ms:hidden xs:hidden lg:block">
+      <div className="flex flex-row ml-[10%] mr-[10%] mb-20 justify-between">
+        <h1 className="text-4xl tracking-wider light">OUR CREATIONS</h1>
+        <button className="buttonn">SEE ALL</button>
       </div>
       <div className="image-grid mb-80">
         {images.map((image, index) => (
           <div key={index} className="image-item">
             <img src={image.src} alt={image.title} />
-            <div className="image-title">{image.title}</div>
+            <div className="image-title light">{image.title}</div>
           </div>
         ))}
       </div>
     </div>
+
+    {/* Small Devices */}
+        <div className="sm:flex xs:flex ms:flex flex-col lg:hidden">
+        <div className="flex flex-row ml-[10%] mr-[10%] mb-20 justify-center">
+        <h1 className="text-2xl tracking-wider light">OUR CREATIONS</h1>
+       
+      </div>
+      <div className="image-grid mb-10">
+        {images.map((image, index) => (
+          <div key={index} className="image-item">
+            <img src={image.src} alt={image.title} />
+            <div className="image-title light">{image.title}</div>
+          </div>
+        ))}
+       
+      </div>
+      <button className="buttonn lightt ">SEE ALL</button>
+        </div>
+
+  </div>
   );
 };
 

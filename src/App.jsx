@@ -2,7 +2,7 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  useLocation,
+  
 } from "react-router-dom";
 
 import Home from "./Home.jsx";
@@ -15,9 +15,9 @@ import Products from "./Products.jsx";
 import Layout from "./Components/ui/Layout.jsx";
 
 const AppContent = () => {
-  const location = useLocation();
+
   return (
-    <Layout currentPath={location.pathname}>
+    <Layout >
       <Routes>
         <Route index element={<Home />} />
         <Route path="/Careers" element={<Careers />} />{" "}

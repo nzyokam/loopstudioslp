@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import "../ui/Hamburger.css";
 import { navLinks } from "../../constants/NavBar";
@@ -26,31 +25,36 @@ const HamburgerMenu = () => {
         </svg>
       </button>
       <nav id="sidebar" className="menu">
-        <ul>
-          <li>
-            <button
-              className="cursor-pointer duration-200 hover:scale-125 active:scale-100"
-              title="Go Back"
-              onClick={hideSideBar}
+        <div className="flex justify-between mt-10 m-5">
+          <Link to="/">
+            <img src="./logo.svg" alt="logo" className="h-auto mr-[50vw]" />
+          </Link>
+          <button
+            className="cursor-pointer duration-200 hover:scale-125 active:scale-100"
+            title="Close SideBar"
+            onClick={hideSideBar}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="44"
+              height="44"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="x-button"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50px"
-                height="50px"
-                viewBox="0 0 24 24"
-                className="stroke-gray-700/[80] transform rotate-180"
-              >
-                <path
-                  strokeLinejoin="round"
-                  strokeLinecap="round"
-                  strokeWidth="1.5"
-                  d="M11 6L5 12M5 12L11 18M5 12H19"
-                ></path>
-              </svg>
-            </button>
-          </li>
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <ul className="mt-20 m-10">
+          
           {navLinks.map((link) => (
-            <li key={link.display} className="pb-5" onClick={hideSideBar}>
+            <li key={link.display} className="light mt-[10vw] uppercase text-4xl" onClick={hideSideBar}>
               <Link to={link.link}>{link.display}</Link>
             </li>
           ))}
